@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Abishek Yadav — Software Engineer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1 class="brand">Abishek Yadav</h1>
+        <nav class="nav">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+          <a
+            href="file:///c:/Users/LENOVO/Downloads/_Resume%20CV.pdf"
+            target="_blank"
+            rel="noopener"
+            >Resume (PDF)</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="hero container">
+        <img src="assets/profile.jpg" alt="Abishek Yadav" class="avatar" />
+        <div class="hero-content">
+          <h2>Hi — I'm Abishek Yadav</h2>
+          <p class="lead">
+            Software Developer experienced in designing scalable applications,
+            interactive front-ends, and AI-assisted solutions. Strong in Python,
+            Java and JavaScript. Passionate about building high-impact products.
+          </p>
+          <p>
+            <a class="btn" href="#projects">See my work</a>
+            <a class="btn ghost" href="#contact">Get in touch</a>
+          </p>
+          <p class="muted small">
+            LinkedIn ·
+            <a
+              href="http://www.linkedin.com/in/abishek-yadav-163208323"
+              target="_blank"
+              rel="noopener"
+              >Profile</a
+            >
+            — GitHub ·
+            <a
+              href="https://github.com/ABISHEKYADAV-R"
+              target="_blank"
+              rel="noopener"
+              >ABISHEKYADAV-R</a
+            >
+            — LeetCode ·
+            <a
+              href="https://leetcode.com/u/abishekramesh2005/"
+              target="_blank"
+              rel="noopener"
+              >abishekramesh2005</a
+            >
+          </p>
+        </div>
+      </section>
+
+      <section id="about" class="container about">
+        <h3>About</h3>
+        <p>
+          Software Developer experienced in building full-stack apps and
+          AI-assisted features. Comfortable across frontend and backend
+          (React/Next.js, Node), with solid fundamentals in algorithms, data
+          structures and OOP.
+        </p>
+
+        <h4>Education</h4>
+        <ul>
+          <li>
+            B.E. Computer Science — Bannari Amman Institute of Technology (Sep
+            2023 — Apr 2027). CGPA: 7.7
+          </li>
+          <li>
+            Higher Secondary — Seventh Day Adventist Matric Higher Secondary
+            (Jun 2022 — Mar 2023). 93.66%
+          </li>
+        </ul>
+      </section>
+
+      <section id="projects" class="container projects">
+        <h3>Projects</h3>
+        <div class="grid">
+          <article class="card">
+            <h4>Artisan Marketplace</h4>
+            <p>
+              Full-stack marketplace using Next.js + TypeScript to help artisans
+              sell handcrafted products augmented with AI insights for listings.
+            </p>
+          </article>
+
+          <article class="card">
+            <h4>e-commerce UI (Amazon-like)</h4>
+            <p>
+              Core shopping flows (product listing, cart, checkout UI) built
+              with React; created reusable component-driven architecture.
+            </p>
+          </article>
+
+          <article class="card">
+            <h4>Fitness Pose Detection</h4>
+            <p>
+              Real-time posture detection using OpenCV + MediaPipe to track
+              joints and compute motion accuracy; improved stability across
+              workouts by refining angle calculations.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills" class="container about">
+        <h3>Technical Skills</h3>
+        <ul class="skills">
+          <li>Languages: Java, C, Python, JavaScript</li>
+          <li>Frameworks: React.js, Next.js</li>
+          <li>DB: MySQL, MongoDB</li>
+          <li>Tools: Git, GitHub, Vercel, VS Code</li>
+          <li>
+            Certifications: AWS Cloud Practitioner, Python (Coursera/HackerRank)
+          </li>
+        </ul>
+      </section>
+
+      <section id="contact" class="container contact">
+        <h3>Contact</h3>
+        <p>
+          If you'd like to work together or have questions, send a message or
+          email me directly.
+        </p>
+
+        <form id="contact-form">
+          <label>
+            <input type="text" name="name" placeholder="Your name" required />
+          </label>
+          <label>
+            <input
+              type="email"
+              name="email"
+              placeholder="Your email"
+              required />
+          </label>
+          <label>
+            <textarea
+              name="message"
+              rows="5"
+              placeholder="Message"
+              required></textarea>
+          </label>
+          <button type="submit" class="btn">Send</button>
+        </form>
+
+        <p class="muted">
+          Email:
+          <a id="email-link" href="mailto:abishekramesh2005@gmail.com"
+            >abishekramesh2005@gmail.com</a
+          >
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          © <span id="year"></span> Abishek Yadav — Built with HTML, CSS &
+          JavaScript
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
