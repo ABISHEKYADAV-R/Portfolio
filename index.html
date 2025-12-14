@@ -3,332 +3,39 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Abishek Yadav — Portfolio</title>
+    <title>Abishek Yadav — Software Engineer Portfolio</title>
 
     <!-- Google font -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
       rel="stylesheet" />
 
-    <style>
-      :root {
-        --bg-1: #071022;
-        --bg-2: #071829;
-        --card: rgba(255, 255, 255, 0.04);
-        --glass: rgba(255, 255, 255, 0.03);
-        --muted: #9aa4b2;
-        --accent: #4fd1c5;
-        --accent-2: #7bd3ff;
-        --text: #e6eef6;
-        --radius: 14px;
-        --container: 1100px;
-        --shadow: 0 10px 30px rgba(2, 6, 23, 0.6);
-        --glass-border: rgba(255, 255, 255, 0.04);
-      }
-      html,
-      body {
-        height: 100%;
-        margin: 0;
-        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto,
-          "Helvetica Neue", Arial;
-        color: var(--text);
-        background: linear-gradient(180deg, var(--bg-1), var(--bg-2));
-        -webkit-font-smoothing: antialiased;
-      }
-      a {
-        color: var(--accent);
-        text-decoration: none;
-      }
-      .container {
-        max-width: var(--container);
-        margin: 0 auto;
-        padding: 2rem;
-      }
-      .header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
-        padding: 1rem 0;
-      }
-      .brand {
-        font-weight: 800;
-        letter-spacing: -0.5px;
-      }
-      .nav {
-        display: flex;
-        gap: 1rem;
-        align-items: center;
-      }
-      .nav a {
-        color: var(--muted);
-        font-weight: 600;
-        font-size: 0.92rem;
-        padding: 0.45rem 0.6rem;
-        border-radius: 10px;
-      }
-      .nav a:hover {
-        color: var(--text);
-        background: linear-gradient(
-          90deg,
-          rgba(255, 255, 255, 0.02),
-          rgba(255, 255, 255, 0.01)
-        );
-      }
-      .theme-toggle {
-        background: transparent;
-        border: 1px solid var(--glass-border);
-        padding: 0.35rem 0.5rem;
-        border-radius: 10px;
-        color: var(--muted);
-        cursor: pointer;
-      }
-      .hero {
-        display: grid;
-        grid-template-columns: 160px 1fr;
-        gap: 2rem;
-        align-items: center;
-        padding: 2.2rem;
-        border-radius: var(--radius);
-        background: linear-gradient(
-          180deg,
-          rgba(255, 255, 255, 0.02),
-          transparent
-        );
-        box-shadow: var(--shadow);
-        border: 1px solid var(--glass-border);
-        margin-top: 1rem;
-      }
-      .avatar {
-        width: 160px;
-        height: 160px;
-        border-radius: 16px;
-        object-fit: cover;
-        border: 3px solid rgba(255, 255, 255, 0.04);
-      }
-      .hi {
-        margin: 0;
-        color: var(--accent-2);
-        font-weight: 700;
-        font-size: 0.95rem;
-      }
-      .title {
-        margin: 0.25rem 0 0.6rem 0;
-        font-size: 2rem;
-        line-height: 1.05;
-      }
-      .lead {
-        color: var(--muted);
-        max-width: 62ch;
-        margin-bottom: 0.9rem;
-      }
-      .cta {
-        display: flex;
-        gap: 0.75rem;
-        flex-wrap: wrap;
-      }
-      .btn {
-        background: linear-gradient(90deg, var(--accent), #6ee9e0);
-        color: #012;
-        padding: 0.6rem 0.9rem;
-        border-radius: 10px;
-        font-weight: 700;
-        border: 0;
-        cursor: pointer;
-        box-shadow: 0 6px 20px rgba(79, 209, 197, 0.12);
-      }
-      .btn.secondary {
-        background: transparent;
-        border: 1px solid rgba(255, 255, 255, 0.06);
-        color: var(--text);
-      }
-      .socials {
-        display: flex;
-        gap: 0.6rem;
-        margin-top: 0.6rem;
-      }
-      .socials a {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.45rem;
-        color: var(--muted);
-        font-weight: 600;
-        padding: 0.3rem 0.5rem;
-        border-radius: 8px;
-      }
-      .socials a svg {
-        width: 18px;
-        height: 18px;
-        opacity: 0.95;
-      }
-
-      .section {
-        margin-top: 2.2rem;
-        padding: 1.6rem;
-        border-radius: 12px;
-        background: linear-gradient(
-          180deg,
-          rgba(255, 255, 255, 0.015),
-          transparent
-        );
-        border: 1px solid var(--glass-border);
-        box-shadow: 0 8px 30px rgba(2, 6, 23, 0.45);
-      }
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
-      }
-      .card {
-        background: linear-gradient(
-          180deg,
-          rgba(255, 255, 255, 0.02),
-          transparent
-        );
-        padding: 1rem;
-        border-radius: 12px;
-        border: 1px solid rgba(255, 255, 255, 0.03);
-        transition: transform 0.28s cubic-bezier(0.2, 0.9, 0.3, 1),
-          box-shadow 0.28s;
-        cursor: default;
-      }
-      .card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 18px 40px rgba(2, 6, 23, 0.6);
-      }
-      .card h4 {
-        margin: 0 0 0.45rem 0;
-      }
-      .card p {
-        color: var(--muted);
-        margin: 0;
-      }
-      .skills {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.6rem;
-        margin-top: 0.8rem;
-      }
-      .tag {
-        background: rgba(255, 255, 255, 0.02);
-        padding: 0.45rem 0.7rem;
-        border-radius: 999px;
-        font-weight: 600;
-        color: var(--muted);
-        border: 1px solid rgba(255, 255, 255, 0.02);
-      }
-
-      .contact-form {
-        display: flex;
-        flex-direction: column;
-        gap: 0.6rem;
-        max-width: 640px;
-      }
-      input,
-      textarea {
-        padding: 0.7rem;
-        border-radius: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.04);
-        background: transparent;
-        color: var(--text);
-        outline: none;
-      }
-      .small {
-        font-size: 0.88rem;
-        color: var(--muted);
-      }
-
-      .footer {
-        margin-top: 2rem;
-        padding: 1rem;
-        text-align: center;
-        color: var(--muted);
-        font-size: 0.9rem;
-      }
-
-      /* Responsive */
-      @media (max-width: 980px) {
-        .grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-        .hero {
-          grid-template-columns: 120px 1fr;
-        }
-        .avatar {
-          width: 120px;
-          height: 120px;
-        }
-      }
-      @media (max-width: 640px) {
-        .grid {
-          grid-template-columns: 1fr;
-        }
-        .hero {
-          grid-template-columns: 1fr;
-          grid-auto-rows: auto;
-        }
-        .avatar {
-          width: 96px;
-          height: 96px;
-        }
-        .header {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-        .nav {
-          flex-wrap: wrap;
-        }
-      }
-
-      /* subtle entrance */
-      .fade-in {
-        opacity: 0;
-        transform: translateY(8px);
-        animation: fadeIn 700ms forwards;
-      }
-      @keyframes fadeIn {
-        to {
-          opacity: 1;
-          transform: none;
-        }
-      }
-
-      /* light theme (toggle) */
-      :root.light {
-        --bg-1: #f8fbff;
-        --bg-2: #eef7ff;
-        --card: rgba(2, 6, 23, 0.03);
-        --glass: rgba(2, 6, 23, 0.03);
-        --muted: #355166;
-        --text: #071421;
-        --glass-border: rgba(2, 6, 23, 0.06);
-        --shadow: 0 8px 30px rgba(12, 30, 45, 0.06);
-      }
-    </style>
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="container">
-      <header class="header fade-in" style="--delay: 0ms">
+    <header class="site-header">
+      <div class="container">
         <div class="brand">Abishek Yadav</div>
         <nav class="nav">
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
           <a href="#skills">Skills</a>
           <a href="#contact">Contact</a>
-          <button class="theme-toggle" id="themeToggle" title="Toggle theme">
-            Toggle
-          </button>
         </nav>
-      </header>
+      </div>
+    </header>
 
-      <section class="hero fade-in" id="hero" style="animation-delay: 80ms">
+    <div class="container">
+      <section class="hero" id="hero">
         <img
           class="avatar"
           src="assets/profile.jpg"
-          alt="Abishek Yadav — avatar" />
-        <div>
+          alt="Abishek Yadav"
+          onerror="this.src='https://via.placeholder.com/180x180/4fd1c5/012?text=AY'" />
+        <div class="hero-content">
           <p class="hi">Hi, I build products & AI features</p>
-          <h1 class="title">Abishek Yadav — Software Engineer</h1>
+          <h2>Abishek Yadav — Software Engineer</h2>
           <p class="lead">
             Software Developer experienced in full‑stack web apps, real‑time
             vision systems and AI‑augmented UX. Comfortable with React/Next,
@@ -337,23 +44,19 @@
 
           <div class="cta">
             <a class="btn" href="#projects">See my work</a>
-            <a class="btn secondary" href="#contact">Get in touch</a>
-            <a
-              class="btn secondary"
-              href="assets/_Resume CV.pdf"
-              target="_blank"
-              rel="noopener"
-              >Resume (PDF)</a
-            >
+            <a class="btn ghost" href="#contact">Get in touch</a>
           </div>
 
-          <div class="socials small" aria-label="social links">
+          <div class="socials">
             <a
               href="http://www.linkedin.com/in/abishek-yadav-163208323"
               target="_blank"
-              rel="noopener">
+              rel="noopener"
+              title="LinkedIn">
               <svg
                 viewBox="0 0 24 24"
+                width="20"
+                height="20"
                 fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -364,8 +67,13 @@
             <a
               href="https://github.com/ABISHEKYADAV-R"
               target="_blank"
-              rel="noopener">
-              <svg viewBox="0 0 24 24" fill="currentColor">
+              rel="noopener"
+              title="GitHub">
+              <svg
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                fill="currentColor">
                 <path
                   d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.92.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.36-1.3-1.72-1.3-1.72-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.76.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.2-3.1-.12-.3-.52-1.52.11-3.18 0 0 .98-.31 3.2 1.19a11.07 11.07 0 012.92-.39c.99 0 2 .13 2.92.39 2.22-1.5 3.2-1.19 3.2-1.19.63 1.66.23 2.88.11 3.18.75.81 1.2 1.84 1.2 3.1 0 4.43-2.71 5.4-5.29 5.68.42.36.79 1.09.79 2.2 0 1.58-.02 2.86-.02 3.25 0 .31.21.68.8.56A10.52 10.52 0 0023.5 12C23.5 5.65 18.35.5 12 .5z" />
               </svg>
@@ -374,17 +82,15 @@
             <a
               href="https://leetcode.com/u/abishekramesh2005/"
               target="_blank"
-              rel="noopener">
-              <span style="color: var(--muted)">LeetCode</span>
+              rel="noopener"
+              title="LeetCode">
+              <span>💻 LeetCode</span>
             </a>
           </div>
         </div>
       </section>
 
-      <section
-        id="about"
-        class="section fade-in"
-        style="animation-delay: 160ms">
+      <section id="about" class="section about">
         <h3>About</h3>
         <p class="small">
           Software Developer experienced in building full‑stack applications and
@@ -394,98 +100,138 @@
         </p>
 
         <div
-          style="display: flex; gap: 2rem; margin-top: 1rem; flex-wrap: wrap">
-          <div style="flex: 1; min-width: 220px">
+          style="display: flex; gap: 2rem; margin-top: 1.5rem; flex-wrap: wrap">
+          <div style="flex: 1; min-width: 280px">
             <h4>Education</h4>
-            <ul class="small">
-              <li>
-                B.E. Computer Science — Bannari Amman Institute of Technology
-                (Sep 2023 — Apr 2027). CGPA: 7.7
+            <ul style="list-style: none; padding-left: 0">
+              <li style="margin-bottom: 0.8rem">
+                <strong>B.E. Computer Science</strong><br />
+                <span class="small">Bannari Amman Institute of Technology</span
+                ><br />
+                <span class="small muted">Sep 2023 — Apr 2027 · CGPA: 7.7</span>
               </li>
               <li>
-                Higher Secondary — Seventh Day Adventist Matric Higher Secondary
-                (Jun 2022 — Mar 2023). 93.66%
+                <strong>Higher Secondary</strong><br />
+                <span class="small"
+                  >Seventh Day Adventist Matric Higher Secondary</span
+                ><br />
+                <span class="small muted">Jun 2022 — Mar 2023 · 93.66%</span>
               </li>
             </ul>
           </div>
-          <div style="flex: 1; min-width: 220px">
+          <div style="flex: 1; min-width: 280px">
             <h4>Certifications</h4>
-            <ul class="small">
-              <li>AWS Cloud Practitioner Essentials</li>
-              <li>Python (Coursera/HackerRank)</li>
+            <ul style="list-style: none; padding-left: 0">
+              <li style="margin-bottom: 0.5rem">
+                ✓ AWS Cloud Practitioner Essentials
+              </li>
+              <li>✓ Python (Coursera/HackerRank)</li>
             </ul>
+
+            <div style="margin-top: 1.5rem">
+              <a
+                class="btn ghost"
+                href="assets/_Resume CV.pdf"
+                target="_blank"
+                rel="noopener"
+                style="display: inline-block">
+                📄 Download Resume
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
-      <section
-        id="projects"
-        class="section fade-in"
-        style="animation-delay: 240ms">
+      <section id="projects" class="section projects">
         <h3>Projects</h3>
-        <div class="grid" style="margin-top: 1rem">
+        <div class="grid">
           <article class="card">
-            <h4>Artisan Marketplace</h4>
+            <h4>🛍️ Artisan Marketplace</h4>
             <p>
               Full‑stack marketplace using Next.js + TypeScript; AI image
-              analysis for faster listings and category suggestions.
+              analysis for faster listings and category suggestions. Features
+              real-time updates and secure payment integration.
             </p>
+            <div style="margin-top: 1rem">
+              <span class="tag">Next.js</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">AI</span>
+            </div>
           </article>
 
           <article class="card">
-            <h4>e‑commerce UI (Amazon‑like)</h4>
+            <h4>🛒 e‑commerce UI</h4>
             <p>
               Component‑driven React UI for product listing, cart and checkout
-              flows, designed for reuse and accessibility.
+              flows, designed for reuse and accessibility. Amazon-inspired
+              design with modern UX patterns.
             </p>
+            <div style="margin-top: 1rem">
+              <span class="tag">React</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">CSS</span>
+            </div>
           </article>
 
           <article class="card">
-            <h4>Fitness Pose Detection</h4>
+            <h4>🏋️ Fitness Pose Detection</h4>
             <p>
               Real‑time posture detection with OpenCV + MediaPipe, refined angle
-              calculations to improve workout tracking accuracy.
+              calculations to improve workout tracking accuracy. Supports
+              multiple exercise types.
             </p>
+            <div style="margin-top: 1rem">
+              <span class="tag">Python</span>
+              <span class="tag">OpenCV</span>
+              <span class="tag">MediaPipe</span>
+            </div>
           </article>
         </div>
       </section>
 
-      <section
-        id="skills"
-        class="section fade-in"
-        style="animation-delay: 320ms">
+      <section id="skills" class="section">
         <h3>Technical Skills</h3>
         <div class="skills">
-          <span class="tag">Java</span>
-          <span class="tag">Python</span>
-          <span class="tag">JavaScript / TypeScript</span>
-          <span class="tag">React / Next.js</span>
-          <span class="tag">Node / Express</span>
-          <span class="tag">MySQL / MongoDB</span>
-          <span class="tag">OpenCV / MediaPipe</span>
-          <span class="tag">Git, Vercel, Docker</span>
+          <li>Java</li>
+          <li>Python</li>
+          <li>JavaScript / TypeScript</li>
+          <li>React.js</li>
+          <li>Next.js</li>
+          <li>Node.js / Express</li>
+          <li>MySQL</li>
+          <li>MongoDB</li>
+          <li>OpenCV</li>
+          <li>MediaPipe</li>
+          <li>Git & GitHub</li>
+          <li>Vercel</li>
+          <li>Docker</li>
+          <li>AWS</li>
         </div>
       </section>
 
-      <section
-        id="contact"
-        class="section fade-in"
-        style="animation-delay: 400ms">
+      <section id="contact" class="section contact">
         <h3>Contact</h3>
         <p class="small">
-          Interested in collaborating? Send a message or email me directly.
+          Interested in collaborating or have a project in mind? Send me a
+          message or reach out directly.
         </p>
 
-        <form id="contact-form" class="contact-form" onsubmit="return false">
+        <form id="contact-form">
           <input name="name" type="text" placeholder="Your name" required />
           <input name="email" type="email" placeholder="Your email" required />
           <textarea
             name="message"
             rows="5"
-            placeholder="Message"
+            placeholder="Your message..."
             required></textarea>
-          <div style="display: flex; gap: 0.6rem; align-items: center">
-            <button id="sendBtn" class="btn" type="button">Send message</button>
+          <div
+            style="
+              display: flex;
+              gap: 0.8rem;
+              align-items: center;
+              flex-wrap: wrap;
+            ">
+            <button class="btn" type="submit">Send message</button>
             <span class="small muted"
               >Or email:
               <a href="mailto:abishekramesh2005@gmail.com"
@@ -495,69 +241,17 @@
           </div>
         </form>
       </section>
-
-      <footer
-        class="footer small footer fade-in"
-        style="animation-delay: 480ms">
-        <p>
-          © <span id="year"></span> Abishek Yadav — Built with HTML, CSS & JS
-        </p>
-      </footer>
     </div>
 
-    <script>
-      // theme toggle
-      const themeToggle = document.getElementById("themeToggle");
-      function setTheme(light) {
-        if (light)
-          document.documentElement.classList.add("light"),
-            (localStorage.theme = "light");
-        else
-          document.documentElement.classList.remove("light"),
-            (localStorage.theme = "dark");
-      }
-      // init
-      setTheme(localStorage.theme === "light");
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          © <span id="year"></span> Abishek Yadav — Built with HTML, CSS &
+          JavaScript
+        </p>
+      </div>
+    </footer>
 
-      themeToggle.addEventListener("click", () => {
-        setTheme(!document.documentElement.classList.contains("light"));
-      });
-
-      // smooth scroll for internal links
-      document.querySelectorAll('a[href^="#"]').forEach((a) => {
-        a.addEventListener("click", (e) => {
-          const target = document.querySelector(a.getAttribute("href"));
-          if (target) {
-            e.preventDefault();
-            target.scrollIntoView({ behavior: "smooth", block: "start" });
-          }
-        });
-      });
-
-      // contact: open mail client with form data
-      document.getElementById("sendBtn").addEventListener("click", () => {
-        const form = document.getElementById("contact-form");
-        const fd = new FormData(form);
-        const name = fd.get("name") || "No name";
-        const email = fd.get("email") || "";
-        const message = fd.get("message") || "";
-        const subject = encodeURIComponent(`Portfolio message from ${name}`);
-        const body = encodeURIComponent(
-          `Name: ${name}\nEmail: ${email}\n\n${message}`
-        );
-        // primary: mailto to your email
-        window.location.href = `mailto:abishekramesh2005@gmail.com?subject=${subject}&body=${body}`;
-      });
-
-      // entrance animations stagger
-      document.querySelectorAll(".fade-in").forEach((el, i) => {
-        el.style.animationDelay = i * 80 + "ms";
-        el.classList.add("fade-in");
-      });
-
-      // footer year
-      const y = new Date().getFullYear();
-      document.getElementById("year").textContent = y;
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>

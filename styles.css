@@ -1,18 +1,19 @@
 :root {
-  --bg-1: #071022;
-  --bg-2: #0a1628;
-  --bg-3: #0d1b2e;
-  --card: rgba(255, 255, 255, 0.04);
-  --glass: rgba(255, 255, 255, 0.03);
-  --muted: #9aa4b2;
-  --accent: #4fd1c5;
-  --accent-2: #7bd3ff;
-  --accent-glow: rgba(79, 209, 197, 0.15);
-  --text: #e6eef6;
+  /* Light theme base colors (white background) */
+  --bg-1: #ffffff;
+  --bg-2: #f8fafc;
+  --bg-3: #f4f6f8;
+  --card: rgba(2, 6, 23, 0.03);
+  --glass: rgba(2, 6, 23, 0.03);
+  --muted: #556677;
+  --accent: #0ea5a4; /* teal */
+  --accent-2: #06b6d4;
+  --accent-glow: rgba(14, 165, 164, 0.08);
+  --text: #071421; /* dark text */
   --radius: 14px;
   --container-width: 1100px;
-  --shadow: 0 10px 30px rgba(2, 6, 23, 0.6);
-  --glass-border: rgba(255, 255, 255, 0.06);
+  --shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  --glass-border: rgba(2, 6, 23, 0.06);
 }
 
 * {
@@ -32,8 +33,14 @@ body {
 
 body {
   margin: 0;
-  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
-  background: linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 50%, var(--bg-3) 100%);
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  background: linear-gradient(
+    180deg,
+    var(--bg-1) 0%,
+    var(--bg-2) 50%,
+    var(--bg-3) 100%
+  );
   background-attachment: fixed;
   color: var(--text);
   line-height: 1.6;
@@ -49,15 +56,15 @@ body {
 
 /* Header */
 .site-header {
-  background: rgba(7, 16, 34, 0.8);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  padding: 1rem 0;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 0.8rem 0;
   position: sticky;
   top: 0;
   z-index: 100;
   border-bottom: 1px solid var(--glass-border);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
 }
 
 .site-header .container {
@@ -97,12 +104,16 @@ body {
 
 .nav a:hover {
   color: var(--text);
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.04),
+    rgba(255, 255, 255, 0.02)
+  );
   transform: translateY(-2px);
 }
 
 .nav a::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -125,7 +136,11 @@ body {
   align-items: center;
   padding: 3rem 2.5rem;
   border-radius: var(--radius);
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.03) 0%,
+    rgba(255, 255, 255, 0.01) 100%
+  );
   box-shadow: var(--shadow), 0 0 40px var(--accent-glow);
   border: 1px solid var(--glass-border);
   margin-top: 2rem;
@@ -134,7 +149,7 @@ body {
 }
 
 .hero::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -50%;
   right: -20%;
@@ -219,13 +234,18 @@ body {
 }
 
 .btn::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
   transition: left 0.5s;
 }
 
@@ -290,7 +310,11 @@ body {
 }
 
 .section {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.005) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.02) 0%,
+    rgba(255, 255, 255, 0.005) 100%
+  );
   border-radius: 14px;
   padding: 2rem;
   border: 1px solid var(--glass-border);
@@ -309,7 +333,7 @@ body {
 }
 
 .section h3::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -6px;
   left: 0;
@@ -337,7 +361,11 @@ body {
 
 .skills li,
 .tag {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.02) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.04) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
   padding: 0.6rem 1rem;
   border-radius: 20px;
   font-weight: 600;
@@ -349,7 +377,11 @@ body {
 
 .skills li:hover,
 .tag:hover {
-  background: linear-gradient(135deg, rgba(79, 209, 197, 0.1) 0%, rgba(79, 209, 197, 0.05) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(79, 209, 197, 0.1) 0%,
+    rgba(79, 209, 197, 0.05) 100%
+  );
   border-color: var(--accent);
   color: var(--accent);
   transform: translateY(-3px);
@@ -365,7 +397,11 @@ body {
 }
 
 .card {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.03) 0%,
+    rgba(255, 255, 255, 0.01) 100%
+  );
   padding: 1.8rem;
   border-radius: 14px;
   border: 1px solid rgba(255, 255, 255, 0.06);
@@ -376,13 +412,18 @@ body {
 }
 
 .card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(79, 209, 197, 0.08), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(79, 209, 197, 0.08),
+    transparent
+  );
   transition: left 0.6s;
 }
 
@@ -482,16 +523,16 @@ textarea::placeholder {
     gap: 2rem;
     padding: 2rem;
   }
-  
+
   .avatar {
     width: 140px;
     height: 140px;
   }
-  
+
   .hero-content h2 {
     font-size: 2rem;
   }
-  
+
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   }
@@ -503,35 +544,35 @@ textarea::placeholder {
     gap: 1.5rem;
     padding: 1.5rem;
   }
-  
+
   .avatar {
     width: 120px;
     height: 120px;
   }
-  
+
   .hero-content h2 {
     font-size: 1.8rem;
   }
-  
+
   .site-header .container {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
   }
-  
+
   .nav {
     flex-wrap: wrap;
     width: 100%;
   }
-  
+
   .container {
     padding: 1rem;
   }
-  
+
   .grid {
     grid-template-columns: 1fr;
   }
-  
+
   .section {
     padding: 1.5rem;
   }
